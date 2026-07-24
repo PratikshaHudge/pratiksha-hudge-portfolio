@@ -1,6 +1,3 @@
-/* =====================================================
-   SKILLS SECTION
-===================================================== */
 
 .skills {
     padding: 100px 0;
@@ -12,10 +9,6 @@
     margin: auto;
     padding: 0 20px;
 }
-
-/* =====================================================
-   SECTION TITLE
-===================================================== */
 
 .section-title {
     text-align: center;
@@ -37,19 +30,11 @@
     line-height: 1.8;
 }
 
-/* =====================================================
-   ACCORDION CONTAINER
-===================================================== */
-
 .accordion {
     display: flex;
     flex-direction: column;
     gap: 22px;
 }
-
-/* =====================================================
-   ACCORDION CARD
-===================================================== */
 
 .accordion-card {
 
@@ -81,8 +66,6 @@
 
 }
 
-/* Active Card */
-
 .accordion-card.active{
 
     border-color: var(--primary-color);
@@ -90,10 +73,6 @@
     box-shadow: 0 20px 45px rgba(0,0,0,.25);
 
 }
-
-/* =====================================================
-   ACCORDION HEADER
-===================================================== */
 
 .accordion-header{
 
@@ -119,10 +98,6 @@
 
 }
 
-/* =====================================================
-   LEFT SIDE
-===================================================== */
-
 .left{
 
     display:flex;
@@ -132,10 +107,6 @@
     gap:22px;
 
 }
-
-/* =====================================================
-   ICON
-===================================================== */
 
 .icon{
 
@@ -167,10 +138,6 @@
 
 }
 
-/* =====================================================
-   TITLE
-===================================================== */
-
 .left h3{
 
     color:var(--text-color);
@@ -191,9 +158,7 @@
 
 }
 
-/* =====================================================
-   RIGHT SIDE
-===================================================== */
+
 
 .right{
 
@@ -225,9 +190,7 @@
 
 }
 
-/* =====================================================
-   ACCORDION CONTENT
-===================================================== */
+
 
 .accordion-content{
 
@@ -238,10 +201,6 @@
     animation:fadeIn .35s ease;
 
 }
-
-/* =====================================================
-   SKILLS GRID
-===================================================== */
 
 .skills-list{
 
@@ -259,9 +218,6 @@
 
 }
 
-/* =====================================================
-   SKILL ITEM
-===================================================== */
 
 .skill-item{
 
@@ -285,10 +241,6 @@
 
 }
 
-/* =====================================================
-   SKILL ITEM HOVER
-===================================================== */
-
 .skill-item:hover{
 
     transform:translateX(8px);
@@ -301,9 +253,7 @@
 
 }
 
-/* =====================================================
-   CHECK ICON
-===================================================== */
+
 
 .skill-item svg{
 
@@ -315,9 +265,7 @@
 
 }
 
-/* =====================================================
-   SKILL NAME
-===================================================== */
+
 
 .skill-item span{
 
@@ -330,10 +278,6 @@
     line-height:1.5;
 
 }
-
-/* =====================================================
-   ACTIVE CARD HEADER
-===================================================== */
 
 .accordion-card.active .icon{
 
@@ -349,10 +293,6 @@
 
 }
 
-/* =====================================================
-   HEADER HOVER
-===================================================== */
-
 .accordion-header:hover .icon{
 
     transform:rotate(-6deg) scale(1.05);
@@ -361,9 +301,6 @@
 
 }
 
-/* =====================================================
-   CARD TRANSITIONS
-===================================================== */
 
 .accordion-card{
 
@@ -373,10 +310,6 @@
         box-shadow .3s ease;
 
 }
-
-/* =====================================================
-   CONTENT ANIMATION
-===================================================== */
 
 @keyframes fadeIn{
 
@@ -393,6 +326,180 @@
         opacity:1;
 
         transform:translateY(0);
+
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .skills {
+        padding: 80px 0;
+    }
+
+    .section-title h2 {
+        font-size: 2.4rem;
+    }
+
+    .accordion-header {
+        padding: 22px;
+    }
+
+    .icon {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
+
+    .left h3 {
+        font-size: 1.15rem;
+    }
+
+    .left span {
+        font-size: .9rem;
+    }
+
+}
+
+/* ---------- Tablets ---------- */
+
+@media (max-width:768px){
+
+    .section-title{
+        margin-bottom:45px;
+    }
+
+    .section-title h2{
+        font-size:2.2rem;
+    }
+
+    .section-title p{
+        font-size:.95rem;
+    }
+
+    .accordion-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:18px;
+
+        padding:22px;
+
+    }
+
+    .right{
+
+        width:100%;
+
+        display:flex;
+
+        justify-content:space-between;
+
+    }
+
+    .skills-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:576px){
+
+    .skills{
+
+        padding:70px 0;
+
+    }
+
+    .container{
+
+        padding:0 18px;
+
+    }
+
+    .section-title h2{
+
+        font-size:2rem;
+
+    }
+
+    .section-title p{
+
+        font-size:.9rem;
+
+        line-height:1.7;
+
+    }
+
+    .accordion{
+
+        gap:18px;
+
+    }
+
+    .accordion-header{
+
+        padding:20px;
+
+    }
+
+    .left{
+
+        gap:15px;
+
+    }
+
+    .icon{
+
+        width:50px;
+
+        height:50px;
+
+        font-size:22px;
+
+        border-radius:15px;
+
+    }
+
+    .left h3{
+
+        font-size:1rem;
+
+    }
+
+    .left span{
+
+        font-size:.85rem;
+
+    }
+
+    .right small{
+
+        font-size:.8rem;
+
+    }
+
+    .accordion-content{
+
+        padding:0 20px 20px;
+
+    }
+
+    .skill-item{
+
+        padding:14px 16px;
+
+    }
+
+    .skill-item span{
+
+        font-size:.92rem;
 
     }
 

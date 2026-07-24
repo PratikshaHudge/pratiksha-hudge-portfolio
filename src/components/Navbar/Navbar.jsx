@@ -33,27 +33,39 @@ function Navbar() {
         <ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
           <li>
-            <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+            <a href="#home" onClick={() => setMenuOpen(false)}>
+              Home
+            </a>
           </li>
 
           <li>
-            <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+            <a href="#about" onClick={() => setMenuOpen(false)}>
+              About
+            </a>
           </li>
 
           <li>
-            <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
+            <a href="#skills" onClick={() => setMenuOpen(false)}>
+              Skills
+            </a>
           </li>
 
           <li>
-            <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
+            <a href="#career-journey" onClick={() => setMenuOpen(false)}>
+              Career Journey
+            </a>
           </li>
 
           <li>
-            <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+            <a href="#projects" onClick={() => setMenuOpen(false)}>
+              Projects
+            </a>
           </li>
 
           <li>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
           </li>
 
         </ul>
