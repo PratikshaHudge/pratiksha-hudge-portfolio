@@ -1,0 +1,11 @@
+.footer {
+    padding: 30px 20px;
+    text-align: center;
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}

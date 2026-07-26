@@ -1,28 +1,24 @@
 import "./Hero.css";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaArrowRight,
-} from "react-icons/fa";
+import { Link } from "react-router-dom";
+
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+
+import { FaXTwitter } from "react-icons/fa6";
+import { SiLeetcode } from "react-icons/si";
 
 function Hero() {
   return (
     <section className="hero" id="home">
       <div className="container hero-container">
-        {/* LEFT */}
-
         <motion.div
           className="hero-left"
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.9 }}
         >
-          <span className="hero-tag">
-            🚀 Building Industrial Software
-          </span>
+          <span className="hero-tag">⚡ Industrial Solutions Engineer</span>
 
           <h3>Hello, I'm</h3>
 
@@ -32,79 +28,97 @@ function Hero() {
 
           <div className="designation">
             <Typewriter
-              words={[
-                "Industrial Solutions Engineer"
-              ]}
+              words={["Software Engineer", "Industrial Software Developer"]}
               loop={0}
               cursor
               cursorStyle="|"
               typeSpeed={70}
               deleteSpeed={50}
-              delaySpeed={2500}
+              delaySpeed={2000}
             />
           </div>
 
           <p>
-            I'm a Software Engineer at <b>Prescient Technologies</b>,
-            developing scalable applications for the Industrial Solutions
-            domain. I enjoy building reliable software that solves real-world
-            manufacturing challenges while writing clean, maintainable and
-            efficient code.
+            I'm a Software Engineer passionate about designing and building
+            reliable, scalable software solutions that solve real-world
+            challenges. I enjoy transforming ideas into impactful applications
+            through clean architecture, maintainable code, and a continuous
+            drive for innovation, quality, and excellence in every project I
+            undertake.
           </p>
 
+          {/* Button + Icons */}
+
           <div className="hero-buttons">
-            <a href="#projects" className="btn-primary">
-              View Projects
-              <FaArrowRight />
-            </a>
+            <Link to="/contact" className="btn-primary">
+              Connect With Me
+            </Link>
 
-            <a href="#contact" className="btn-secondary">
-              Contact Me
-            </a>
-          </div>
+            <div className="hero-social">
+              <a
+                href="https://github.com/PratikshaHudge"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub"
+                aria-label="GitHub"
+              >
+                <FaGithub />
+              </a>
 
-          <div className="tech-stack">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>React</span>
-            <span>PostgreSQL</span>
-            <span>AWS</span>
-            <span>RabbitMQ</span>
-          </div>
+              <a
+                href="https://www.linkedin.com/in/pratiksha-hudge-b97790252/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </a>
 
-          <div className="social-icons">
-            <a href="#">
-              <FaGithub />
-            </a>
+              <a
+                href="https://leetcode.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LeetCode"
+                aria-label="LeetCode"
+              >
+                <SiLeetcode />
+              </a>
 
-            <a href="#">
-              <FaLinkedin />
-            </a>
+              <a
+                href="mailto:hudgepratiksha194@gmail.com"
+                title="Email"
+                aria-label="Email"
+              >
+                <FaEnvelope />
+              </a>
 
-            <a href="#">
-              <FaEnvelope />
-            </a>
+              <a
+                href="https://x.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="X (Twitter)"
+                aria-label="X"
+              >
+                <FaXTwitter />
+              </a>
+            </div>
           </div>
         </motion.div>
 
-        {/* RIGHT */}
+        
 
-        <motion.div
-          className="hero-right"
-          initial={{ opacity: 0, x: 60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
+        <div className="hero-right">
           <div className="profile-wrapper">
             <div className="glow-circle"></div>
 
             <img
               src="/profile.png"
-              alt="Profile"
+              alt="Pratiksha Hudge"
               className="profile-image"
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

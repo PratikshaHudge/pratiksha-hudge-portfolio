@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -26,50 +27,60 @@ function Navbar() {
     >
       <div className="container navbar-container">
 
-        <a href="#" className="logo">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="logo"
+          onClick={() => setMenuOpen(false)}
+        >
           Pratiksha<span>.</span>
-        </a>
+        </Link>
 
+        {/* Navigation Links */}
         <ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
           <li>
-            <a href="#home" onClick={() => setMenuOpen(false)}>
+            <Link to="/" onClick={() => setMenuOpen(false)}>
               Home
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#about" onClick={() => setMenuOpen(false)}>
+            <Link to="/about" onClick={() => setMenuOpen(false)}>
               About
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#skills" onClick={() => setMenuOpen(false)}>
+            <Link to="/skills" onClick={() => setMenuOpen(false)}>
               Skills
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#career-journey" onClick={() => setMenuOpen(false)}>
+            <Link
+              to="/career-journey"
+              onClick={() => setMenuOpen(false)}
+            >
               Career Journey
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#projects" onClick={() => setMenuOpen(false)}>
+            <Link to="/projects" onClick={() => setMenuOpen(false)}>
               Projects
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>
               Contact
-            </a>
+            </Link>
           </li>
 
         </ul>
 
+        {/* Resume Button */}
         <a
           href="/resume.pdf"
           className="resume-btn"
@@ -79,6 +90,7 @@ function Navbar() {
           Resume
         </a>
 
+        {/* Mobile Menu Icon */}
         <div
           className="menu-icon"
           onClick={() => setMenuOpen(!menuOpen)}
